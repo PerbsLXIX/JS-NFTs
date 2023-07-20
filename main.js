@@ -22,32 +22,30 @@ function mintNFT (name, eyeColor, shirType, bling) {
         bling : bling
     }
     NFTs.push(holder);
-    console.log("Minted: " + name);
+    console.log(`Minted: ${name}`);
 }
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs () {
     for (let i = 0; i < NFTs.length; i++) {
-        console.log("\nID: \t\t\t\t" + (i + 1));
-        console.log("Name: \t\t\t" + NFTs[i].name);
-        console.log("Eye Color: \t" + NFTs[i].eyeColor);
-        console.log("Shirt Type: " + NFTs[i].shirType);
-        console.log("Bling Type: " + NFTs[i].bling);
+        console.log(`\nID: \t\t${(i + 1)}`);
+        console.log(`Name:       ${NFTs[i].name}`);
+        console.log(`Eye Color:  ${NFTs[i].eyeColor}`);
+        console.log(`Shirt Type: ${NFTs[i].shirType}`);
+        console.log(`Bling Type: ${NFTs[i].bling}`);
     }
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-    console.log("\nNFTs created: " + NFTs.length);
+    console.log(`\nNFTs created: ${NFTs.length}`);
 }
 
 // call your functions below this line
-
-mintNFT("Greg", "Red", "Hoodie", "Cooper");
-mintNFT("Bred", "Red", "Hoodie", "Cooper");
-mintNFT("Sed", "Red", "Hoodie", "Cooper");
-mintNFT("Gad", "Red", "Hoodie", "Cooper");
-mintNFT("Get", "Red", "Hoodie", "Cooper");
+mintNFT("Greg", "Red", "Hoodie", "Copper");
+mintNFT("Morty", "Brown", "Plain Shirt", "Gold");
+mintNFT("Rick", "Blue", "Lab Coat", "Gold");
 listNFTs();
 getTotalSupply();
+
